@@ -115,6 +115,6 @@ catch (exception& e) {
     keep_window_open();
 }
 catch (...) {
-    cerr << "exception\n";
+    cerr << "Kill me \n";
     keep_window_open();
 }

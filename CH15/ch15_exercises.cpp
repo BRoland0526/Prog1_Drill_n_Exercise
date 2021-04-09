@@ -7,14 +7,7 @@
 
 int fac(int n)
 {
-	if(n>1)
-	{
-	    return n>1 ? n*fac(n-1) : 1;
-	}
-	else
-	{
-		return 1;
-	}
+	return n>1 ? n*fac(n-1) : 1;
 }
 
 double one(double x)
@@ -50,7 +43,7 @@ try
 
     //2-3.feladat
     Point tl(600,50);
-    Simple_window win(tl,600,600,"Factorial test");
+    Simple_window win(tl,600,600,"Test");
 
     Axis x(Axis::x,Point(100,300),400,20);
     x.set_color(Color::red);
@@ -62,10 +55,14 @@ try
 
     Flex_function s(one,-10,11,Point(300,300),400,30,30);
     win.attach(s);
+    win.set_label("Test1");
     win.wait_for_button();
+
+    // Graph.cpp 1301-1344 , Graph.h 241-262
 
     s.reset_xscale(20);
     s.reset_yscale(20);
+    win.set_label("Test2");
     win.wait_for_button();
 
     s.reset_fct(sloping_cos);

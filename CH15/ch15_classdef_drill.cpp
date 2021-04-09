@@ -94,13 +94,13 @@ try
 
 	//8.feladat
     vector<Person> persons;
-    Person p4;
+    Person pin;
 
     cout << "Please enter the name and age(First name, Second name, Age): " << endl;
 
-    while (cin>>p4)
+    while (cin>>pin)
     {
-       persons.push_back(p4);
+         persons.push_back(pin);
     }
     for (int i = 0; i<persons.size(); ++i)
     {
